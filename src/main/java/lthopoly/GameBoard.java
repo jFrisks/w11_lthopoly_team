@@ -4,6 +4,8 @@ import lthopoly.spaces.BoardSpace;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+
 
 /**
  * Created by Tank on 4/17/2016.
@@ -34,6 +36,20 @@ public class GameBoard {
      * Creates a new board ready to play
      */
     public GameBoard(List<Player> players) {
+        //add new players to List (players) with values
+        players = initPlayers();
+    }
+
+    public List<Player> initPlayers(){
+        new scan = new Scanner(System.in);
+
+        while(!allPlayersReady){
+            String name = scan.next();
+            int money = scan.next();
+            int pos;
+
+            players.add(new Player(name, money, pos));
+        }
     }
 
     /**

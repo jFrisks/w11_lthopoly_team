@@ -5,6 +5,10 @@ package lthopoly;
  */
 public class Player {
 
+    String name;
+    int money;
+    int pos;
+
     /**
      * Creates a new player
      */
@@ -18,20 +22,21 @@ public class Player {
      * Returns this player's money
      */
     public int getMoney() {
-        return 0;
+        return this.money;
     }
 
     /**
      * Adjusts this player's money
      */
     public void adjustMoney(int money) {
+        this.money += money;
     }
 
     /**
      * Returns this player's position
      */
     public int getPosition() {
-        return 0;
+        return this.pos;
     }
 
     /**
@@ -39,12 +44,13 @@ public class Player {
      */
     @Override
     public String toString() {
-        return null;
+        return this.name;
     }
 
     /**
      * Sets this player's position
      */
     public void setPosition(int pos) {
+        this.pos = pos;
     }
 }
