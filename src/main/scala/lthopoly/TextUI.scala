@@ -6,6 +6,22 @@ import scala.collection.JavaConverters._
 object TextUI {
   private val log = new ArrayBuffer[String]
 
+  /*
+  * Returnerar en lista Vector(Player) (kod av Jacob)
+  */
+  def promptForPlayers: Vector[Player] = {
+    val userInput = Try { scala.io.StdIn.readline("Welcome to LTHopoly! Please enter the number of players.").toInt } match {
+      case Success(i) => i
+      case Failure(f) => println("Must be a number.");
+    }
+    val players = for (i <- 1 to userInput) yield new Player(scala.io.StdIn.readLine("Player " + i + ": ")
+
+    println("Welcome, ")
+    players.foreach(p => print(p.name + ", "))
+
+    players
+  }
+
   /**
    * Prints an ASCII plot of the total amount
    * of money in the game as a function of the turn index
@@ -119,7 +135,7 @@ object TextUI {
     lineBreak
     println(board.toString)
   }
-  
+
   /**
    * Prints a line separator
    */
