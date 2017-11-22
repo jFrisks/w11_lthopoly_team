@@ -9,6 +9,9 @@ public class Player {
      * Creates a new player
      */
     public Player(String name, int money, int pos) {
+        this.name = name;
+        this.money = money;
+        this.pos = pos;
     }
 
     /**
