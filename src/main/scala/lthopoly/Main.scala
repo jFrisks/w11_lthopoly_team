@@ -10,7 +10,9 @@ object Main {
     // 1. prompta angående spelare & sätt upp spelplan
     val players: Vector[Player] = promptForPlayers
     val gameboard = new GameBoard(players)
-    val possbileActionsSet = Map(
+
+    // Vill egentligen inte ha detta här, men var fan annars liksom?
+    val possibileActionsSet = Map(
       0 -> "Throw Dice",
       1 -> "Draw Card",
       2 -> "Buy Property",
@@ -27,12 +29,10 @@ object Main {
       // presentera möjliga handlingar
       possibleActions = gameboard.getPossibleActions
       possibleActions.foreach(a =>
-        println("[" + a + "]" + possbileActionsSet(a))
+        println("[" + a + "]" + possibileActionsSet(a))
       )
       gameboard.doAction(scala.io.StdIn.readLine("Choose an action: "))
     }
-
-
   }
 
   /**
@@ -43,8 +43,10 @@ object Main {
     * @return the user's choice as given by promptForInput.
     */
   def getAction(board: GameBoard): Int = {
-    ???
-    // används getPossibleActions (returnerar int[])
-  }
+    // board -> int[] -> Array[Int] -> Array[(Int, String)] (tror jag)
+    val actions = board.getPossibleActions.asScala.map(
+      a => (a, possibleActions(a)))
 
+    promptForInput(actions)
+  }
 }
