@@ -83,7 +83,7 @@ public class GameBoard {
 
         return player;
     }
-    
+
     /**
      * Returns a list of all players
      */
@@ -120,13 +120,13 @@ public class GameBoard {
                 break;
             }
             case BUY_PROPERTY: {
-                spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
-                System.out.println("Du har köpt detta");
+
+                spaces.get(currentPlayer.pos).action(this, BUY_PROPERTY);
                 //TODO: FEEDBACK
                 break;
             }
             case PAY_RENT: {
-                spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+                spaces.get(currentPlayer.pos).action(this, PAY_RENT);
                 //TODO: FEEDBACK
                 break;
             }
@@ -183,13 +183,13 @@ public class GameBoard {
      public ArrayList<Integer> getStatistics() {
         ArrayList<Integer> sum = new ArrayList<Integer>();
     	int summ = 0;
-        
+
          for(int i = 0; i < players.size(); i++) {
     		 summ = summ + players.get(i).getMoney();
     		 sum.add(i, summ);
-    		 
+
     	}
-    
+
     return sum;
     }
 
@@ -213,4 +213,3 @@ public class GameBoard {
         return out.toString();
     }
 }
-
