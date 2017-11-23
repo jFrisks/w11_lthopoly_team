@@ -40,6 +40,6 @@ public class MoneySpace extends BoardSpace {
      */
     @Override
     public String toString() {
-        return card.getDescription();
+        return "Penga-Korthögen har " + cards.length + " kort";
     }
 }

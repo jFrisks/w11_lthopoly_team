@@ -44,14 +44,16 @@ public class HouseSpace extends BoardSpace {
     @Override
     public void action(GameBoard board, int action) {
         if(action == board.BUY_PROPERTY){
-            board.getCurrentPlayer().adjustMoney(-rent);
+            board.getCurrentPlayer().adjustMoney((-1) * rent);
             owner = board.getCurrentPlayer();
             owned = true;
-        }else if(action == board.PAY_RENT){
-            board.getCurrentPlayer().adjustMoney(-rent);
-            owner.adjustMoney(rent);
+            System.out.println("Du har köpt detta");
+        }else if (action == board.PAY_RENT){
+            board.getCurrentPlayer().adjustMoney((-1) * rent);
+            //owner.adjustMoney(rent);
+            System.out.println("Du har betalat hyra!");
         }else {
-            board.doAction(action);
+          // om man ställer sig på sin egen byggnad
         }
     }
 

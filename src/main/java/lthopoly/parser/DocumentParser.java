@@ -17,28 +17,37 @@ import java.util.Scanner;
  */
 public class DocumentParser {
 
+
+    private static File rootdir = new File("./src/main/resources");
+    private static File boardFile = new File(rootdir, "board.txt");
+    private static File moneycardsFile = new File(rootdir, "moneycards.txt");
+    private static File movecardsFile = new File(rootdir, "movecards.txt");
+
+
+
     /**
      * Returns an ArrayList of BoardSpaces loaded from a file
      */
     public static ArrayList<BoardSpace> getBoard() {
         Scanner scan;
+
         ArrayList<BoardSpace> board = new ArrayList<BoardSpace>();
+
         MoveCard[] movecards = getMoveCards();
         MoneyCard[] moneycards = getMoneyCards();
-
-
-        File file = new File("../../../resources/board.txt");
 
         try {
             String line;
             String[] attr;
 
-            scan = new Scanner(file);
+            scan = new Scanner(boardFile);
 
-            while((line = scan.nextLine()) != null){
+            while(scan.hasNextLine()){
                 String type;
                 int rent;
                 String desc;
+
+                line = scan.nextLine();
 
                 //Splittar texten
                 attr = line.split(";");
@@ -46,17 +55,17 @@ public class DocumentParser {
 
                 //Checkar vilket av alternativen
                 //Hus ger tre alt, de andra ger length 1
-                if(attr[0] == "House" && totalElements == 3){
+                if("House".equals(attr[0]) && totalElements == 3){
                     //Skapa housespace i board
                     rent = Integer.parseInt(attr[1]);
                     desc = attr[2];
                     board.add(new HouseSpace(rent, desc));
                 }
-                else if(attr[0] == "Move" && totalElements == 1){
+                else if("Move".equals(attr[0]) && totalElements == 1){
                     //Skapa movespace i board
                     board.add(new MoveSpace(movecards));
                 }
-                else if(attr[0] == "Money" && totalElements == 1){
+                else if("Money".equals(attr[0]) && totalElements == 1){
                     //skapa moneyspace
                     board.add(new MoneySpace(moneycards));
                 }
@@ -80,7 +89,7 @@ public class DocumentParser {
 
         List<MoneyCard> moneycards = new ArrayList<MoneyCard>();
 
-        File file = new File("../../../resources/moneycards.txt");
+        File file = moneycardsFile;
 
         try {
             String line;
@@ -88,7 +97,8 @@ public class DocumentParser {
 
             scan = new Scanner(file);
 
-            while((line = scan.nextLine()) != null){
+            while(scan.hasNextLine()){
+                line = scan.nextLine();
                 //Splittar texten
                 attr = line.split(";");
 
@@ -115,7 +125,7 @@ public class DocumentParser {
 
         List<MoveCard> movecards = new ArrayList<MoveCard>();
 
-        File file = new File("../../../resources/movecards.txt");
+        File file = movecardsFile;
 
         try {
             String line;
@@ -123,7 +133,8 @@ public class DocumentParser {
 
             scan = new Scanner(file);
 
-            while((line = scan.nextLine()) != null){
+            while(scan.hasNextLine()){
+                line = scan.nextLine();
                 //Splittar texten
                 attr = line.split(";");
 

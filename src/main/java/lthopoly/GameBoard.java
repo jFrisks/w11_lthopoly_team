@@ -1,5 +1,6 @@
 package lthopoly;
 
+import lthopoly.parser.DocumentParser;
 import lthopoly.spaces.BoardSpace;
 
 import java.util.ArrayList;
@@ -11,8 +12,6 @@ import java.util.Scanner;
  * Created by Tank on 4/17/2016.
  */
 public class GameBoard {
-
-    //TODO: Reset player has thrown
 
 
     /**
@@ -42,6 +41,7 @@ public class GameBoard {
      */
     public GameBoard(List<Player> players) {
         this.players = players;
+        spaces = DocumentParser.getBoard();
     }
 
     /**
@@ -83,7 +83,7 @@ public class GameBoard {
 
         return player;
     }
-    
+
     /**
      * Returns a list of all players
      */
@@ -109,31 +109,37 @@ public class GameBoard {
             case THROW_DICE: {
                 moveCurrentPlayer((int)(Math.random() * 5 + 1));
                 currentPlayerHasThrown = true;
+                //TODO: FEEDBACK - hur många steg + vilken typ av ruta1
                 break;
             }
             /**Case 2*/
             case DRAW_CARD: {
                 //Spaceobjectet där spelaren står - väljer en action - matar in this (board) och action draw card.
                 spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+                //TODO: FEEDBACK
                 break;
             }
             case BUY_PROPERTY: {
-                spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+
+                spaces.get(currentPlayer.pos).action(this, BUY_PROPERTY);
+                //TODO: FEEDBACK
                 break;
             }
             case PAY_RENT: {
-                spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+                spaces.get(currentPlayer.pos).action(this, PAY_RENT);
+                //TODO: FEEDBACK
                 break;
             }
             case END_TURN: {
                 currentPlayerHasThrown = false;
+                //TODO: FEEDBACK
                 break;
             }
             case DEFAULT_VIEW: {
                 break;
             }
             case SHOW_BOARD: {
-                this.toString();
+                System.out.println(this.toString());
                 break;
             }
             case EXIT_GAME: {
@@ -177,13 +183,13 @@ public class GameBoard {
      public ArrayList<Integer> getStatistics() {
         ArrayList<Integer> sum = new ArrayList<Integer>();
     	int summ = 0;
-        
+
          for(int i = 0; i < players.size(); i++) {
     		 summ = summ + players.get(i).getMoney();
     		 sum.add(i, summ);
-    		 
+
     	}
-    
+
     return sum;
     }
 
@@ -207,4 +213,3 @@ public class GameBoard {
         return out.toString();
     }
 }
-
