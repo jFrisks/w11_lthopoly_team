@@ -134,7 +134,7 @@ public class GameBoard {
         ArrayList<Integer> sum = new ArrayList<Integer>();
     	int summ = 0;
         
-         for(int i = 0; i> players.size(); i++) {
+         for(int i = 0; i < players.size(); i++) {
     		 summ = summ + players.get(i).getMoney();
     		 sum.add(i, summ);
     		 
