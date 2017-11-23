@@ -38,7 +38,7 @@ object Main {
       )
 
       // Be användaren om ett värde och låt brädet utföra den motsvarande handlingen
-      var action = getAction(gameBoard)
+      action = getAction(gameBoard)
       gameBoard.doAction(action)
 
       if (action == 4)
