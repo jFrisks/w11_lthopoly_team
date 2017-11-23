@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ebb8831-b83b-4e22-86d8-5347c8743f04" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/scala_sdk_2_12_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/lthopoly/Players.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lthopoly/GameBoard.java" afterPath="$PROJECT_DIR$/src/main/java/lthopoly/GameBoard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lthopoly/parser/DocumentParser.java" afterPath="$PROJECT_DIR$/src/main/java/lthopoly/parser/DocumentParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/lthopoly/Main.scala" afterPath="$PROJECT_DIR$/src/main/scala/lthopoly/Main.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/w11_lthopoly_team.iml" afterPath="$PROJECT_DIR$/w11_lthopoly_team.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +18,7 @@
       <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/GameBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
+            <state relative-caret-position="-971">
               <caret line="104" column="7" lean-forward="true" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
               <folding>
                 <element signature="e#919#920#0" expanded="true" />
@@ -389,6 +383,14 @@
       <option name="presentableId" value="Default" />
       <updated>1511439063312</updated>
     </task>
+    <task id="LOCAL-00001" summary="Do action + annat">
+      <created>1511444299660</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1511444299661</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -425,6 +427,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Do action + annat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Do action + annat" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -529,7 +535,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/GameBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
+        <state relative-caret-position="-971">
           <caret line="104" column="7" lean-forward="true" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
           <folding>
             <element signature="e#919#920#0" expanded="true" />
