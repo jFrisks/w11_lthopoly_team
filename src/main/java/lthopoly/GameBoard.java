@@ -74,18 +74,17 @@ public class GameBoard {
      * Returns the player with the most money
      */
     public Player getRichestPlayer() {
-        return null;
-    }
-    String  player = ""
-    player = new players(0, "")
-        for (int i =0, i < 4 i++){
-            if (player.getMoney < players(i)){
-                player = players(i)
-            } 
-            else player
+        Player player = new Player(0, "");
+
+        for (int i = 0; i < players.size(); i++){
+          if (player.getMoney < players(i).getMoney){
+            player = players(i);
+          }
         }
+
+        return player;
+    }
     
-    else player
     /**
      * Returns a list of all players
      */
