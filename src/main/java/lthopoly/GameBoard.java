@@ -114,8 +114,8 @@ public class GameBoard {
     /**
      * Returns the BoardSpace corresponding to the position of the current player.
      */
-    public BoardSpace getCurrentBoardSpace() {
-        return null;
+  public BoardSpace getCurrentBoardSpace() {
+        return spaces.get(currentPlayer.getPosition());
     }
 
     /**
