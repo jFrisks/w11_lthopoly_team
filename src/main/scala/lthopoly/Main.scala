@@ -31,12 +31,6 @@ object Main {
       // sätt currentPlayer
       gameBoard.currentPlayer = players(turn % players.length)
 
-      // presentera möjliga handlingar
-      var possibleActions = gameBoard.getPossibleActions
-      possibleActions.foreach(a =>
-        println("[" + a + "]" + possibleActionsSet(a))
-      )
-
       // Be användaren om ett värde och låt brädet utföra den motsvarande handlingen
       action = getAction(gameBoard)
       gameBoard.doAction(action)
