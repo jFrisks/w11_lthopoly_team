@@ -30,6 +30,15 @@ public class GameBoard {
      */
     private ArrayList<BoardSpace> spaces;
     private List<Player> players;
+    public  Player currentPlayer;
+    private boolean currentPlayerHasThrown;
+
+    private int throwDice() {
+        //return java.util.Random.nextInt(6) + 1;
+        return (int)(Math.random() * 5 + 1);
+
+        // 1 - 6
+    }
 
 
     /**
@@ -44,7 +53,10 @@ public class GameBoard {
      * A game action can be any of the static constants in GameBoard
      */
     public int[] getPossibleActions() {
-        return null;
+      if (!currentPlayerHasThrown)
+        return int[0, 5, 6, 7];
+      else
+        return getCurrentBoardSpace.getPossibleAction;
     }
 
     /**
@@ -52,20 +64,32 @@ public class GameBoard {
      */
     public boolean isGameOver() {
         return false;
+        //kolla om någon av this.players har 0 sek
+
+        if (currentPlayer.getMoney() == 0) return true;
+        else {return false}
     }
 
     /**
      * Returns the player with the most money
      */
     public Player getRichestPlayer() {
-        return null;
-    }
+        Player player = new Player(0, "");
 
+        for (int i = 0; i < players.size(); i++){
+          if (player.getMoney < players(i).getMoney){
+            player = players(i);
+          }
+        }
+
+        return player;
+    }
+    
     /**
      * Returns a list of all players
      */
     public List<Player> getPlayers() {
-        return null;
+        return this.players;
     }
 
     /**
@@ -85,9 +109,8 @@ public class GameBoard {
      * Returns the currently active player
      */
     public Player getCurrentPlayer() {
-        return null;
+        return currentPlayer;
     }
-
     /**
      * Returns the BoardSpace corresponding to the position of the current player.
      */
@@ -107,8 +130,17 @@ public class GameBoard {
      * the total sum of all players' money at the end of a round.
      * E.g. list.get(0) is the total amount of money in the game after the first round.
      */
-    public ArrayList<Integer> getStatistics() {
-        return null;
+     public ArrayList<Integer> getStatistics() {
+        ArrayList<Integer> sum = new ArrayList<Integer>();
+    	int summ = 0;
+        
+         for(int i = 0; i> players.size(); i++) {
+    		 summ = summ + players.get(i).getMoney();
+    		 sum.add(i, summ);
+    		 
+    	}
+    
+    return sum;
     }
 
     /**
@@ -131,3 +163,4 @@ public class GameBoard {
         return out.toString();
     }
 }
+
