@@ -137,8 +137,17 @@ public class GameBoard {
      * the total sum of all players' money at the end of a round.
      * E.g. list.get(0) is the total amount of money in the game after the first round.
      */
-    public ArrayList<Integer> getStatistics() {
-        return null;
+     public ArrayList<Integer> getStatistics() {
+        ArrayList<Integer> sum = new ArrayList<Integer>();
+    	int summ = 0;
+        
+         for(int i = 0; i> players.size(); i++) {
+    		 summ = summ + players.get(i).getMoney();
+    		 sum.add(i, summ);
+    		 
+    	}
+    
+    return sum;
     }
 
     /**
