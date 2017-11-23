@@ -31,6 +31,8 @@ object Main {
       // sätt currentPlayer
       gameBoard.currentPlayer = players(turn % players.length)
 
+      println("Player turn: " + gameBoard.currentPlayer)
+
       // Be användaren om ett värde och låt brädet utföra den motsvarande handlingen
       action = getAction(gameBoard)
       gameBoard.doAction(action)
