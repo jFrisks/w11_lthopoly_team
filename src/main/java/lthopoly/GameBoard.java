@@ -53,32 +53,37 @@ public class GameBoard {
      * A game action can be any of the static constants in GameBoard
      */
     public int[] getPossibleActions() {
-      if (!currentPlayerHasThrown)
-        return int[0, 5, 6, 7];
-      else
-        return getCurrentBoardSpace.getPossibleAction;
-    }
+
+        if (!currentPlayerHasThrown){
+            int[] possibleActions = {THROW_DICE, DEFAULT_VIEW, SHOW_BOARD, EXIT_GAME};
+            return possibleActions;
+        }
+        else{
+            int[] possibleActions = {EXIT_GAME};
+            return possibleActions;
+            }
+        }
 
     /**
      * Checks whether the game is over or not
      */
     public boolean isGameOver() {
-        return false;
         //kolla om någon av this.players har 0 sek
-
         if (currentPlayer.getMoney() == 0) return true;
-        else {return false}
+        else {
+            return false;
+        }
     }
 
     /**
      * Returns the player with the most money
      */
     public Player getRichestPlayer() {
-        Player player = new Player(0, "");
+        Player player = new Player("", 0, 0);
 
         for (int i = 0; i < players.size(); i++){
-          if (player.getMoney < players(i).getMoney){
-            player = players(i);
+          if (player.getMoney < this.players.get(i).getMoney){
+            player = players.get(i);
           }
         }
 
