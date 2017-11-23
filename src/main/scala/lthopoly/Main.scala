@@ -15,7 +15,7 @@ object Main {
 
 
     // Vill egentligen inte ha detta här, men var fan annars liksom?
-    val possibileActionsSet = Map(
+    val possibleActionsSet = Map(
       0 -> "Throw Dice",
       1 -> "Draw Card",
       2 -> "Buy Property",
@@ -34,7 +34,7 @@ object Main {
       // presentera möjliga handlingar
       var possibleActions = gameBoard.getPossibleActions
       possibleActions.foreach(a =>
-        println("[" + a + "]" + possibileActionsSet(a))
+        println("[" + a + "]" + possibleActionsSet(a))
       )
 
       // Be användaren om ett värde och låt brädet utföra den motsvarande handlingen
@@ -44,20 +44,19 @@ object Main {
       if (action == 4)
         turn += 1
     }
-  }
+    /**
+      * Retrieves all possible actions from a GameBoard and joins
+      * them with corresponding description Strings into tuples.
+      * The tuples are then sent to the promptForInput method in TextUI.
+      *
+      * @return the user's choice as given by promptForInput.
+      */
+    def getAction(board: GameBoard): Int = {
+      // board -> int[] -> Array[Int] -> Array[(Int, String)] (tror jag)
+      val actions = board.getPossibleActions.map(
+        a => (a, possibleActionsSet(a)))
 
-  /**
-    * Retrieves all possible actions from a GameBoard and joins
-    * them with corresponding description Strings into tuples.
-    * The tuples are then sent to the promptForInput method in TextUI.
-    *
-    * @return the user's choice as given by promptForInput.
-    */
-  def getAction(board: GameBoard): Int = {
-    // board -> int[] -> Array[Int] -> Array[(Int, String)] (tror jag)
-    val actions = board.getPossibleActions.map(
-      a => (a, possibleActions(a)))
-
-    TextUI.promptForInput(actions)
+      TextUI.promptForInput(actions)
+    }
   }
 }
