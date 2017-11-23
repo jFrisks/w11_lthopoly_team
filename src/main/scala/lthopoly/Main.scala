@@ -8,8 +8,11 @@ object Main {
   def main(args: Array[String]): Unit = {
 
     // 1. prompta angående spelare & sätt upp spelplan
-    val players: Vector[Player] = promptForPlayers
-    val gameboard = new GameBoard(players)
+    val players: Vector[Player] = TextUI.promptForPlayers
+    val gameBoard = new GameBoard(players.asJava)
+    var turn = 0;
+    var action = -1;
+
 
     // Vill egentligen inte ha detta här, men var fan annars liksom?
     val possibileActionsSet = Map(
@@ -24,14 +27,22 @@ object Main {
       )
 
     // 2. Huvud-loop
-    while (!gameboard.isGameOver){
+    while (action != 7){
+      // sätt currentPlayer
+      gameBoard.currentPlayer = players(turn % players.length)
 
       // presentera möjliga handlingar
-      possibleActions = gameboard.getPossibleActions
+      possibleActions = gameBoard.getPossibleActions
       possibleActions.foreach(a =>
         println("[" + a + "]" + possibileActionsSet(a))
       )
-      gameboard.doAction(scala.io.StdIn.readLine("Choose an action: "))
+
+      // Be användaren om ett värde och låt brädet utföra den motsvarande handlingen
+      var action = getAction(gameBoard)
+      gameBoard.doAction(action)
+
+      if (action == 4)
+        turn += 1
     }
   }
 
@@ -47,6 +58,6 @@ object Main {
     val actions = board.getPossibleActions.asScala.map(
       a => (a, possibleActions(a)))
 
-    promptForInput(actions)
+    TextUI.promptForInput(actions)
   }
 }
