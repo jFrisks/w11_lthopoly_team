@@ -55,7 +55,7 @@ object Main {
     */
   def getAction(board: GameBoard): Int = {
     // board -> int[] -> Array[Int] -> Array[(Int, String)] (tror jag)
-    val actions = board.getPossibleActions.asScala.map(
+    val actions = board.getPossibleActions.map(
       a => (a, possibleActions(a)))
 
     TextUI.promptForInput(actions)
