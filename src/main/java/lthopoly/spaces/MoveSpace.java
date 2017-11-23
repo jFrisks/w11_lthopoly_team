@@ -3,15 +3,20 @@ package lthopoly.spaces;
 import lthopoly.GameBoard;
 import lthopoly.cards.MoveCard;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * Created by Tank on 4/17/2016.
  */
 public class MoveSpace extends BoardSpace {
+    MoveCard[] cards;
+    MoveCard card;
 
     /**
      * Creates a new MoveSpace. When landing on this space a card from the card array will be drawn
      */
     public MoveSpace(MoveCard[] cards) {
+        this.cards = cards;
     }
 
     /**
@@ -19,7 +24,8 @@ public class MoveSpace extends BoardSpace {
      */
     @Override
     public int[] getPossibleActions(GameBoard board) {
-        return null;
+        int[] houseActions = {1, 5, 6, 7};
+        return houseActions;
     }
 
     /**
@@ -27,6 +33,12 @@ public class MoveSpace extends BoardSpace {
      */
     @Override
     public void action(GameBoard board, int action) {
+        if (action == 1){
+            card = cards[ThreadLocalRandom.current().nextInt(0, cards.length)];
+            board.getCurrentPlayer().adjustMoney(card.getPositionAdjustment());
+        }else{
+            board.doAction(action);
+        }
     }
 
     /**
@@ -34,6 +46,6 @@ public class MoveSpace extends BoardSpace {
      */
     @Override
     public String toString() {
-        return null;
+        return card.getDescription();
     }
 }

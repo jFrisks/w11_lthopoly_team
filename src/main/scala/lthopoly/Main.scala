@@ -44,22 +44,6 @@ object Main {
       if (action == 4)
         turn += 1
     }
-
-<<<<<<< Updated upstream
-  /**
-    * Retrieves all possible actions from a GameBoard and joins
-    * them with corresponding description Strings into tuples.
-    * The tuples are then sent to the promptForInput method in TextUI.
-    *
-    * @return the user's choice as given by promptForInput.
-    */
-  def getAction(board: GameBoard): Int = {
-    // board -> int[] -> Array[Int] -> Array[(Int, String)] (tror jag)
-    val actions = board.getPossibleActions.map(
-      a => (a, possibleActions(a)))
-
-    TextUI.promptForInput(actions)
-=======
     /**
       * Retrieves all possible actions from a GameBoard and joins
       * them with corresponding description Strings into tuples.
@@ -74,8 +58,5 @@ object Main {
 
       TextUI.promptForInput(actions)
     }
->>>>>>> Stashed changes
   }
-
-
 }
