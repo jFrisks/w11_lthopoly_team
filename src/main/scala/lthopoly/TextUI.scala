@@ -11,16 +11,18 @@ object TextUI {
   * Returnerar en lista Vector(Player) (kod av Jacob)
   */
   def promptForPlayers: Vector[Player] = {
-    val userInput = Try { scala.io.StdIn.readline("Welcome to LTHopoly! Please enter the number of players.").toInt } match {
+    val userInput = Try { val input = scala.io.StdIn.readLine("Welcome to LTHopoly! Please enter the number of players.")
+      input.toInt
+    } match {
       case Success(i) => i
-      case Failure(f) => println("Must be a number.");
+      case Failure(f) => println("Must be a number."); -1
     }
-    val players = for (i <- 1 to userInput) yield new Player(scala.io.StdIn.readLine("Player " + i + ": "))
+    val players = for (i <- 1 to userInput.toInt) yield new Player(scala.io.StdIn.readLine("Player " + i + ": "), 0, 0)
 
     println("Welcome, ")
     players.foreach(p => print(p.name + ", "))
 
-    players
+    players.toVector
   }
 
   /**
