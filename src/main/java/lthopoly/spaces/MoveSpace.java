@@ -46,6 +46,6 @@ public class MoveSpace extends BoardSpace {
      */
     @Override
     public String toString() {
-        return card.getDescription();
+        return "Gå-Korthögen har " + cards.length + " kort";
     }
 }
