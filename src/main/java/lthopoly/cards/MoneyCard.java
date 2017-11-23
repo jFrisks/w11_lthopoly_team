@@ -5,23 +5,28 @@ package lthopoly.cards;
  */
 public class MoneyCard {
 
+    private String description;
+    private int money;
+
     /**
      * Creates a new MoneyCard
      */
     public MoneyCard(String description, int money) {
+        this.description = description;
+        this.money = money;
     }
 
     /**
      * Returns this card's money adjustment value
      */
     public int getMoney() {
-        return 0;
+        return this.money;
     }
 
     /**
      * Returns the description of why the money is adjusted
      */
     public String getDescription() {
-        return null;
+        return this.description;
     }
 }
