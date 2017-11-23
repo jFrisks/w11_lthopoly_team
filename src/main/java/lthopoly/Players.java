@@ -24,6 +24,6 @@ static public class Players {
 
             players.add(new Player(name, money, pos));
         }
-        return players
+        return players;
     }
 }
