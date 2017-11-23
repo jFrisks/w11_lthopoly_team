@@ -53,16 +53,10 @@ public class GameBoard {
      * A game action can be any of the static constants in GameBoard
      */
     public int[] getPossibleActions() {
-        /*
-        * 1. kolla personens pos.
-        * 2. kolla typen av Space
-        * 3. avgör vilka handlingar som är möjliga.
-        * 4.
-        *
-         */
-        int[] lista = new int[8];
-        return null;
-
+      if (!currentPlayerHasThrown)
+        return int[0, 5, 6, 7];
+      else
+        return getCurrentBoardSpace.getPossibleAction;
     }
 
     /**
