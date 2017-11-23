@@ -1,5 +1,6 @@
 package lthopoly;
 
+import lthopoly.parser.DocumentParser;
 import lthopoly.spaces.BoardSpace;
 
 import java.util.ArrayList;
@@ -11,8 +12,6 @@ import java.util.Scanner;
  * Created by Tank on 4/17/2016.
  */
 public class GameBoard {
-
-    //TODO: Reset player has thrown
 
 
     /**
@@ -42,6 +41,7 @@ public class GameBoard {
      */
     public GameBoard(List<Player> players) {
         this.players = players;
+        spaces = DocumentParser.getBoard();
     }
 
     /**
@@ -109,24 +109,30 @@ public class GameBoard {
             case THROW_DICE: {
                 moveCurrentPlayer((int)(Math.random() * 5 + 1));
                 currentPlayerHasThrown = true;
+                //TODO: FEEDBACK - hur många steg + vilken typ av ruta1
                 break;
             }
             /**Case 2*/
             case DRAW_CARD: {
                 //Spaceobjectet där spelaren står - väljer en action - matar in this (board) och action draw card.
                 spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+                //TODO: FEEDBACK
                 break;
             }
             case BUY_PROPERTY: {
                 spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+                System.out.println("Du har köpt detta");
+                //TODO: FEEDBACK
                 break;
             }
             case PAY_RENT: {
                 spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+                //TODO: FEEDBACK
                 break;
             }
             case END_TURN: {
                 currentPlayerHasThrown = false;
+                //TODO: FEEDBACK
                 break;
             }
             case DEFAULT_VIEW: {

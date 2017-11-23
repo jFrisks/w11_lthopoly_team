@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ebb8831-b83b-4e22-86d8-5347c8743f04" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/lthopoly/Players.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/lthopoly/GameBoard.class" afterPath="$PROJECT_DIR$/bin/lthopoly/GameBoard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/lthopoly/Main$.class" afterPath="$PROJECT_DIR$/bin/lthopoly/Main$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/lthopoly/parser/DocumentParser.class" afterPath="$PROJECT_DIR$/bin/lthopoly/parser/DocumentParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/lthopoly/spaces/HouseSpace.class" afterPath="$PROJECT_DIR$/bin/lthopoly/spaces/HouseSpace.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/lthopoly/spaces/MoneySpace.class" afterPath="$PROJECT_DIR$/bin/lthopoly/spaces/MoneySpace.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/lthopoly/spaces/MoveSpace.class" afterPath="$PROJECT_DIR$/bin/lthopoly/spaces/MoveSpace.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="2ebb8831-b83b-4e22-86d8-5347c8743f04" name="Default" comment="Do action + annat">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/lthopoly/parser/DocumentParser.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lthopoly/GameBoard.java" afterPath="$PROJECT_DIR$/src/main/java/lthopoly/GameBoard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lthopoly/parser/DocumentParser.java" afterPath="$PROJECT_DIR$/src/main/java/lthopoly/parser/DocumentParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lthopoly/parser/Test.java" afterPath="$PROJECT_DIR$/src/main/java/lthopoly/parser/Test.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -20,34 +15,46 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/w11_lthopoly_team$Test.coverage" NAME="Test Coverage Results" MODIFIED="1511449133907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>lthopoly.parser.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/GameBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+            <state relative-caret-position="133">
+              <caret line="111" column="71" lean-forward="false" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
               <folding>
-                <element signature="e#919#920#0" expanded="true" />
-                <element signature="e#957#958#0" expanded="true" />
-                <element signature="e#4221#4222#0" expanded="true" />
-                <element signature="e#4830#4839#0" expanded="true" />
-                <marker date="1511444459000" expanded="false" signature="2172:2183" ph=" { " />
-                <marker date="1511444459000" expanded="false" signature="2203:2209" ph=" }" />
-                <marker date="1511444459000" expanded="false" signature="2312:2323" ph=" { " />
-                <marker date="1511444459000" expanded="false" signature="2342:2348" ph=" }" />
-                <marker date="1511444459000" expanded="false" signature="3978:3989" ph=" { " />
-                <marker date="1511444459000" expanded="false" signature="4010:4016" ph=" }" />
+                <element signature="e#4466#4467#0" expanded="true" />
+                <element signature="e#4528#4529#0" expanded="true" />
+                <element signature="e#5137#5146#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DocumentParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/parser/DocumentParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-142">
+              <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              <folding>
+                <element signature="e#898#910#0" expanded="true" />
+                <element signature="e#2624#2635#0" expanded="true" />
+                <element signature="e#3522#3532#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/lthopoly/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="34" column="10" lean-forward="false" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+            <state relative-caret-position="330">
+              <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -56,21 +63,9 @@
       <file leaf-file-name="MoveCard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/cards/MoveCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="225">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocumentParser.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/parser/DocumentParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="64" />
-              <folding>
-                <element signature="e#2345#2356#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -78,11 +73,9 @@
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/parser/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding>
-                <element signature="e#135#136#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,10 +86,20 @@
             <state relative-caret-position="150">
               <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="31" />
               <folding>
-                <marker date="1511444459000" expanded="true" signature="889:1105" ph="{...}" />
-                <marker date="1511444459000" expanded="true" signature="1111:1180" ph="/**...*/" />
                 <marker date="1511444459000" expanded="false" signature="1223:1234" ph=" { " />
                 <marker date="1511444459000" expanded="false" signature="1263:1269" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HouseSpace.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/spaces/HouseSpace.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <marker date="1511444459000" expanded="true" signature="1358:1522" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -112,6 +115,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="BoardSpace.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/spaces/BoardSpace.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MoveSpace.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/spaces/MoveSpace.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -122,30 +135,6 @@
                 <marker date="1511444459000" expanded="true" signature="1166:1234" ph="/**...*/" />
                 <marker date="1511444459000" expanded="false" signature="1277:1288" ph=" { " />
                 <marker date="1511444459000" expanded="false" signature="1317:1323" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardSpace.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/spaces/BoardSpace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HouseSpace.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/spaces/HouseSpace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <marker date="1511444459000" expanded="true" signature="1358:1522" ph="{...}" />
-                <marker date="1511444459000" expanded="true" signature="1528:1640" ph="/**...*/" />
-                <marker date="1511444459000" expanded="false" signature="1683:1694" ph=" { " />
               </folding>
             </state>
           </provider>
@@ -173,9 +162,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/lthopoly/Players.java" />
         <option value="$PROJECT_DIR$/src/main/java/lthopoly/Actions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lthopoly/parser/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/lthopoly/parser/DocumentParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/lthopoly/GameBoard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/lthopoly/parser/Test.java" />
       </list>
     </option>
   </component>
@@ -237,25 +226,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lthopoly" type="462c0819:PsiDirectoryNode" />
-              <item name="cards" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="w11_lthopoly_team" type="b2602c69:ProjectViewProjectNode" />
-              <item name="w11_lthopoly_team" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lthopoly" type="462c0819:PsiDirectoryNode" />
               <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="w11_lthopoly_team" type="b2602c69:ProjectViewProjectNode" />
-              <item name="w11_lthopoly_team" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lthopoly" type="462c0819:PsiDirectoryNode" />
-              <item name="spaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="w11_lthopoly_team" type="b2602c69:ProjectViewProjectNode" />
@@ -304,7 +275,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -430,8 +401,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -473,8 +444,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292011" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292011" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -505,20 +477,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/lthopoly/GameBoard.java</url>
-          <line>159</line>
+          <line>165</line>
           <properties class="lthopoly.GameBoard" method="getCurrentBoardSpace">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/lthopoly/parser/Test.java</url>
-          <line>4</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -539,18 +505,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/cards/MoveCard.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/Actions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="135">
+          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/moneycards.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/Players.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="1539" column="0" lean-forward="false" selection-start-line="1539" selection-start-column="0" selection-end-line="1539" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -568,30 +542,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/Actions.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/moneycards.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/spaces/HouseSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <marker date="1511444459000" expanded="true" signature="1358:1522" ph="{...}" />
-            <marker date="1511444459000" expanded="true" signature="1528:1640" ph="/**...*/" />
-            <marker date="1511444459000" expanded="false" signature="1683:1694" ph=" { " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/spaces/BoardSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -601,66 +555,75 @@
         <state relative-caret-position="150">
           <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="31" />
           <folding>
-            <marker date="1511444459000" expanded="true" signature="889:1105" ph="{...}" />
-            <marker date="1511444459000" expanded="true" signature="1111:1180" ph="/**...*/" />
             <marker date="1511444459000" expanded="false" signature="1223:1234" ph=" { " />
             <marker date="1511444459000" expanded="false" signature="1263:1269" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/Players.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/cards/MoveCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/GameBoard.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/spaces/HouseSpace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#4221#4222#0" expanded="true" />
-            <element signature="e#4830#4839#0" expanded="true" />
-            <marker date="1511444459000" expanded="false" signature="2172:2183" ph=" { " />
-            <marker date="1511444459000" expanded="false" signature="2203:2209" ph=" }" />
-            <marker date="1511444459000" expanded="false" signature="2312:2323" ph=" { " />
-            <marker date="1511444459000" expanded="false" signature="2342:2348" ph=" }" />
-            <marker date="1511444459000" expanded="false" signature="3978:3989" ph=" { " />
-            <marker date="1511444459000" expanded="false" signature="4010:4016" ph=" }" />
+            <marker date="1511444459000" expanded="true" signature="1358:1522" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/lthopoly/Main.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/spaces/BoardSpace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="34" column="10" lean-forward="false" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        <state relative-caret-position="95">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/parser/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#135#136#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/parser/DocumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="64" />
+        <state relative-caret-position="-142">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding>
-            <element signature="e#2345#2356#0" expanded="true" />
+            <element signature="e#898#910#0" expanded="true" />
+            <element signature="e#2624#2635#0" expanded="true" />
+            <element signature="e#3522#3532#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lthopoly/GameBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="111" column="71" lean-forward="false" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
+          <folding>
+            <element signature="e#4466#4467#0" expanded="true" />
+            <element signature="e#4528#4529#0" expanded="true" />
+            <element signature="e#5137#5146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/lthopoly/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

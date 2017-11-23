@@ -1,7 +1,9 @@
 package lthopoly.parser;
 
+import java.io.IOException;
+
 public class Test {
-    public static void main(String[] args){
-        DocumentParser.getMoneyCards();
+    public static void main(String[] args) throws IOException {
+        DocumentParser.getBoard();
     }
 }
