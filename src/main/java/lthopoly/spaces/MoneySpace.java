@@ -19,7 +19,7 @@ public class MoneySpace extends BoardSpace {
      */
     @Override
     public int[] getPossibleActions(GameBoard board) {
-        int[] houseActions = {1, 5, 6, 7};
+        int[] houseActions = {board.DRAW_CARD, board.DEFAULT_VIEW, board.SHOW_BOARD, board.EXIT_GAME};
         return houseActions;
     }
 
@@ -27,7 +27,7 @@ public class MoneySpace extends BoardSpace {
      * Performs a game action available while on this space
      */
     public void action(GameBoard board, int action) {
-        if (action == 1){
+        if (action == board.DRAW_CARD){
             card = cards[ThreadLocalRandom.current().nextInt(0, cards.length)];
             board.getCurrentPlayer().adjustMoney(card.getMoney());
         }else{

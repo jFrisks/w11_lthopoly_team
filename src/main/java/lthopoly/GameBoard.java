@@ -49,16 +49,14 @@ public class GameBoard {
      * A game action can be any of the static constants in GameBoard
      */
     public int[] getPossibleActions() {
-
         if (!currentPlayerHasThrown){
             int[] possibleActions = {THROW_DICE, DEFAULT_VIEW, SHOW_BOARD, EXIT_GAME};
             return possibleActions;
-        }
-        else{
-            int[] possibleActions = {EXIT_GAME};
+        } else {
+            int[] possibleActions = getCurrentBoardSpace().getPossibleActions(this);
             return possibleActions;
-            }
         }
+    }
 
     /**
      * Checks whether the game is over or not
