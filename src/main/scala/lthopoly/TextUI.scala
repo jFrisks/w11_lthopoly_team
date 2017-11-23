@@ -2,6 +2,7 @@ package lthopoly
 
 import scala.collection.mutable.{ArrayBuffer, Buffer}
 import scala.collection.JavaConverters._
+import scala.util.{Try, Failure, Success}
 
 object TextUI {
   private val log = new ArrayBuffer[String]
@@ -14,7 +15,7 @@ object TextUI {
       case Success(i) => i
       case Failure(f) => println("Must be a number.");
     }
-    val players = for (i <- 1 to userInput) yield new Player(scala.io.StdIn.readLine("Player " + i + ": ")
+    val players = for (i <- 1 to userInput) yield new Player(scala.io.StdIn.readLine("Player " + i + ": "))
 
     println("Welcome, ")
     players.foreach(p => print(p.name + ", "))

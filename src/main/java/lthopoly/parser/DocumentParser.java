@@ -3,6 +3,9 @@ package lthopoly.parser;
 import lthopoly.cards.MoneyCard;
 import lthopoly.cards.MoveCard;
 import lthopoly.spaces.BoardSpace;
+import lthopoly.spaces.HouseSpace;
+import lthopoly.spaces.MoneySpace;
+import lthopoly.spaces.MoveSpace;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -33,15 +36,48 @@ public class DocumentParser {
             scan = new Scanner(file);
 
             while((line = scan.nextLine()) != null){
+                String type;
+                int value;
+                String rent;
+
                 //Splittar texten
                 attr = line.split(";");
+                int totalElements = attr.length;
+
+                //Checkar vilket av alternativen
+                //Hus ger tre alt, de andra ger length 1
+                if(attr[0] == "House" && totalElements == 3){
+                    //Skapa housespace i board
+                    board.add(new HouseSpace(rent, ));
+                }
+                else if(attr[0] == "Move" && totalElements == 1){
+                    //Skapa movespace i board
+                    board.add(new MoveSpace())
+                }
+                else if(attr[0] == "Money" && totalElements == 1){
+                    //skapa moneyspace
+                    board.add(new MoneySpace());
+                }
+                else{
+                    System.out.println("Något gick jävligt fel med perser");
+                }
+
+
+
+                //KOLLAR ANTAL ELEMENT PÅ RADEN (1, 2 eller 3)
+                //If el(0) house/money/move -> {}
+                    //Skapa space-objekt utifrån det
+
+
+
+
 
                 //Assignar lämliga namn
-                String desc = attr[0];
+                String type = attr[0];
                 int money = Integer.parseInt(attr[1]);
 
                 //Lägg in attributes
-                board.add();
+                board.add(new Game);
 
             }
         } catch (FileNotFoundException e) {

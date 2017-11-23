@@ -7,7 +7,6 @@ import lthopoly.GameBoard;
  * Created by Tank on 4/17/2016.
  */
 public class HouseSpace extends BoardSpace {
-
     /**
      * Creates a new HouseSpace with rent and a description
      */
