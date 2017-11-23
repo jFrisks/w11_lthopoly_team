@@ -123,6 +123,7 @@ public class GameBoard {
      * Negative adjustment moves the player backwards.
      */
     public void moveCurrentPlayer(int adjustment) {
+        currentplayer.setPosition(currentplayer.getPosition + adjustment);
     }
 
     /**
