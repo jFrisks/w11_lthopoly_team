@@ -82,7 +82,7 @@ public class GameBoard {
         Player player = new Player("", 0, 0);
 
         for (int i = 0; i < players.size(); i++){
-          if (player.getMoney < this.players.get(i).getMoney){
+          if (player.getMoney() < this.players.get(i).getMoney()){
             player = players.get(i);
           }
         }
@@ -128,7 +128,7 @@ public class GameBoard {
      * Negative adjustment moves the player backwards.
      */
     public void moveCurrentPlayer(int adjustment) {
-        currentplayer.setPosition(currentplayer.getPosition + adjustment);
+        currentPlayer.setPosition(currentPlayer.getPosition() + adjustment);
     }
 
     /**
