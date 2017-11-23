@@ -30,9 +30,10 @@ public class HouseSpace extends BoardSpace {
     @Override
     public int[] getPossibleActions(GameBoard board) {
         if(owned){
-            houseActions = new int[]{3, 5, 6, 7};
+            houseActions = new int[]{board.PAY_RENT, board.DEFAULT_VIEW, board.SHOW_BOARD, board.EXIT_GAME};
         }else{
-            houseActions = new int[]{2, 4, 5, 6, 7};
+            houseActions = new int[]{board.BUY_PROPERTY, board.END_TURN,
+                    board.DEFAULT_VIEW, board.SHOW_BOARD, board.EXIT_GAME};
         }
         return houseActions;
     }
@@ -42,11 +43,11 @@ public class HouseSpace extends BoardSpace {
      */
     @Override
     public void action(GameBoard board, int action) {
-        if(action == 2){
+        if(action == board.BUY_PROPERTY){
             board.getCurrentPlayer().adjustMoney(-rent);
             owner = board.getCurrentPlayer();
             owned = true;
-        }else if(action == 3){
+        }else if(action == board.PAY_RENT){
             board.getCurrentPlayer().adjustMoney(-rent);
             owner.adjustMoney(rent);
         }else {
