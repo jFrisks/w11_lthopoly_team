@@ -8,9 +8,6 @@ import lthopoly.spaces.MoneySpace;
 import lthopoly.spaces.MoveSpace;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -37,8 +34,8 @@ public class DocumentParser {
 
             while((line = scan.nextLine()) != null){
                 String type;
-                int value;
-                String rent;
+                int rent;
+                String desc;
 
                 //Splittar texten
                 attr = line.split(";");
@@ -48,37 +45,21 @@ public class DocumentParser {
                 //Hus ger tre alt, de andra ger length 1
                 if(attr[0] == "House" && totalElements == 3){
                     //Skapa housespace i board
-                    board.add(new HouseSpace(rent, ));
+                    rent = Integer.parseInt(attr[1]);
+                    desc = attr[2];
+                    board.add(new HouseSpace(rent, desc));
                 }
                 else if(attr[0] == "Move" && totalElements == 1){
                     //Skapa movespace i board
-                    board.add(new MoveSpace())
+                    board.add(new MoveSpace(getMoveCards()));
                 }
                 else if(attr[0] == "Money" && totalElements == 1){
                     //skapa moneyspace
-                    board.add(new MoneySpace());
+                    board.add(new MoneySpace(getMoneyCards()));
                 }
                 else{
-                    System.out.println("Något gick jävligt fel med perser");
+                    System.out.println("Något gick jävligt fel med persern");
                 }
-
-
-
-                //KOLLAR ANTAL ELEMENT PÅ RADEN (1, 2 eller 3)
-                //If el(0) house/money/move -> {}
-                    //Skapa space-objekt utifrån det
-
-
-
-
-
-                //Assignar lämliga namn
-                String type = attr[0];
-                int money = Integer.parseInt(attr[1]);
-
-                //Lägg in attributes
-                board.add(new Game);
-
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -96,7 +77,7 @@ public class DocumentParser {
 
         List<MoneyCard> moneycards = new ArrayList<MoneyCard>();
 
-        File file = new File("../../../resources/moneycard.txt");
+        File file = new File("../../../resources/moneycards.txt");
 
         try {
             String line;
@@ -127,8 +108,34 @@ public class DocumentParser {
      * Returns an array of MoveCards loaded from a file
      */
     public static MoveCard[] getMoveCards() {
-        return null;
+        Scanner scan;
+
+        List<MoveCard> movecards = new ArrayList<MoveCard>();
+
+        File file = new File("../../../resources/movecards.txt");
+
+        try {
+            String line;
+            String[] attr;
+
+            scan = new Scanner(file);
+
+            while((line = scan.nextLine()) != null){
+                //Splittar texten
+                attr = line.split(";");
+
+                //Assignar lämliga namn
+                String desc = attr[0];
+                int money = Integer.parseInt(attr[1]);
+
+                //Lägg in attributes
+                movecards.add(new MoveCard(desc, money));
+
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return movecards.toArray(new MoveCard[]{});
     }
-
-
 }
