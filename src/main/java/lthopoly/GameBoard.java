@@ -96,7 +96,7 @@ public class GameBoard {
      * Returns a list of all BoardSpaces
      */
     public List<BoardSpace> getBoardSpaces() {
-        return null;
+        return this.spaces;
     }
 
     /**
