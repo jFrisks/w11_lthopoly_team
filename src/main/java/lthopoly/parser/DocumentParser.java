@@ -23,6 +23,9 @@ public class DocumentParser {
     public static ArrayList<BoardSpace> getBoard() {
         Scanner scan;
         ArrayList<BoardSpace> board = new ArrayList<BoardSpace>();
+        MoveCard[] movecards = getMoveCards();
+        MoneyCard[] moneycards = getMoneyCards();
+
 
         File file = new File("../../../resources/board.txt");
 
@@ -51,11 +54,11 @@ public class DocumentParser {
                 }
                 else if(attr[0] == "Move" && totalElements == 1){
                     //Skapa movespace i board
-                    board.add(new MoveSpace(getMoveCards()));
+                    board.add(new MoveSpace(movecards));
                 }
                 else if(attr[0] == "Money" && totalElements == 1){
                     //skapa moneyspace
-                    board.add(new MoneySpace(getMoneyCards()));
+                    board.add(new MoneySpace(moneycards));
                 }
                 else{
                     System.out.println("Något gick jävligt fel med persern");

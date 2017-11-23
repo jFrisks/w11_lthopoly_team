@@ -12,6 +12,9 @@ import java.util.Scanner;
  */
 public class GameBoard {
 
+    //TODO: Reset player has thrown
+
+
     /**
      * Menu constants
      */
@@ -32,13 +35,6 @@ public class GameBoard {
     private List<Player> players;
     public  Player currentPlayer;
     private boolean currentPlayerHasThrown;
-
-    private int throwDice() {
-        //return java.util.Random.nextInt(6) + 1;
-        return (int)(Math.random() * 5 + 1);
-
-        // 1 - 6
-    }
 
 
     /**
@@ -108,6 +104,49 @@ public class GameBoard {
      * Performs an action for the current player
      */
     public void doAction(int action) {
+
+        //If-statements depending on action
+        switch (action){
+            /**CASE 1**/
+            case THROW_DICE: {
+                moveCurrentPlayer((int)(Math.random() * 5 + 1));
+                currentPlayerHasThrown = true;
+                break;
+            }
+            /**Case 2*/
+            case DRAW_CARD: {
+                //Spaceobjectet där spelaren står - väljer en action - matar in this (board) och action draw card.
+                spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+                break;
+            }
+            case BUY_PROPERTY: {
+                spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+                break;
+            }
+            case PAY_RENT: {
+                spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+                break;
+            }
+            case END_TURN: {
+                currentPlayerHasThrown = false;
+                break;
+            }
+            case DEFAULT_VIEW: {
+                break;
+            }
+            case SHOW_BOARD: {
+                this.toString();
+                break;
+            }
+            case EXIT_GAME: {
+                System.out.println("Du borde automatiskt avsluta av main-metoden");
+                break;
+            }
+            default: {
+                System.out.println("Något gick fel, inget av alternativen valdes.");
+                break;
+            }
+        }
 
     }
 
