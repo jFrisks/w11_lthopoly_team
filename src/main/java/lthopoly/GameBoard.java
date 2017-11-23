@@ -139,7 +139,7 @@ public class GameBoard {
                 break;
             }
             case SHOW_BOARD: {
-                this.toString();
+                System.out.println(this.toString());
                 break;
             }
             case EXIT_GAME: {
