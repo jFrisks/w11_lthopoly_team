@@ -30,6 +30,15 @@ public class GameBoard {
      */
     private ArrayList<BoardSpace> spaces;
     private List<Player> players;
+    public  Player currentPlayer;
+    private boolean currentPlayerHasThrown;
+
+    private int throwDice() {
+        //return java.util.Random.nextInt(6) + 1;
+        return (int)(Math.random() * 5 + 1);
+
+        // 1 - 6
+    }
 
 
     /**
@@ -44,7 +53,16 @@ public class GameBoard {
      * A game action can be any of the static constants in GameBoard
      */
     public int[] getPossibleActions() {
+        /*
+        * 1. kolla personens pos.
+        * 2. kolla typen av Space
+        * 3. avgör vilka handlingar som är möjliga.
+        * 4.
+        *
+         */
+        int[] lista = new int[8];
         return null;
+
     }
 
     /**
@@ -52,6 +70,10 @@ public class GameBoard {
      */
     public boolean isGameOver() {
         return false;
+        //kolla om någon av this.players har 0 sek
+
+        if (currentPlayer.getMoney() == 0) return true;
+        else {return false}
     }
 
     /**
@@ -60,12 +82,21 @@ public class GameBoard {
     public Player getRichestPlayer() {
         return null;
     }
-
+    String  player = ""
+    player = new players(0, "")
+        for (int i =0, i < 4 i++){
+            if (player.getMoney < players(i)){
+                player = players(i)
+            } 
+            else player
+        }
+    
+    else player
     /**
      * Returns a list of all players
      */
     public List<Player> getPlayers() {
-        return null;
+        return this.players;
     }
 
     /**
@@ -85,16 +116,13 @@ public class GameBoard {
      * Returns the currently active player
      */
     public Player getCurrentPlayer() {
-        return null;
+        return currentPlayer;
     }
-
     /**
      * Returns the BoardSpace corresponding to the position of the current player.
      */
     public BoardSpace getCurrentBoardSpace() {
-      BoardSpace currentSpace = spaces(currentPlayer.pos)
-
-      return currentSpace;
+        return null;
     }
 
     /**
@@ -133,3 +161,4 @@ public class GameBoard {
         return out.toString();
     }
 }
+
