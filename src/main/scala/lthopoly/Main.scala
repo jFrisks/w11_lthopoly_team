@@ -32,7 +32,7 @@ object Main {
       gameBoard.currentPlayer = players(turn % players.length)
 
       // presentera möjliga handlingar
-      possibleActions = gameBoard.getPossibleActions
+      var possibleActions = gameBoard.getPossibleActions
       possibleActions.foreach(a =>
         println("[" + a + "]" + possibileActionsSet(a))
       )
