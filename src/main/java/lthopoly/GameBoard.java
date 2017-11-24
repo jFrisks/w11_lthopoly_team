@@ -63,7 +63,7 @@ public class GameBoard {
      */
     public boolean isGameOver() {
         //kolla om någon av this.players har 0 sek
-        if (currentPlayer.getMoney() == 0) return true;
+        if (currentPlayer.getMoney() <= 0) return true;
         else {
             return false;
         }
