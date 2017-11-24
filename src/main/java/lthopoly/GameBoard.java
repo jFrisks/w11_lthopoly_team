@@ -107,21 +107,26 @@ public class GameBoard {
         switch (action){
             /**CASE 1**/
             case THROW_DICE: {
-                moveCurrentPlayer((int)(Math.random() * 5 + 1));
+                int diceRoll = (int)(Math.random() * 5 + 1);
+                moveCurrentPlayer(diceRoll);
                 currentPlayerHasThrown = true;
+                System.out.println("Du tog " + diceRoll + " steg.");
                 //TODO: FEEDBACK - hur många steg + vilken typ av ruta1
                 break;
             }
             /**Case 2*/
             case DRAW_CARD: {
                 //Spaceobjectet där spelaren står - väljer en action - matar in this (board) och action draw card.
+                
                 spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+                currentPlayerHasThrown = false;
                 //TODO: FEEDBACK
                 break;
             }
             case BUY_PROPERTY: {
 
                 spaces.get(currentPlayer.pos).action(this, BUY_PROPERTY);
+                currentPlayerHasThrown = false;
                 //TODO: FEEDBACK
                 break;
             }
