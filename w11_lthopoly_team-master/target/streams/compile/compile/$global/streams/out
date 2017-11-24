@@ -1,0 +1,6 @@
+[0m[[0m[31merror[0m] [0m[0m/h/d1/o/ja0020jo-s/Kurser/Programmering_Grund/kap11/w11_lthopoly_team-master/src/main/scala/lthopoly/Main.scala:44:56: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : java.util.ArrayList[Integer][0m
+[0m[[0m[31merror[0m] [0m[0m required: scala.collection.mutable.Buffer[Int][0m
+[0m[[0m[31merror[0m] [0m[0m    print(TextUI.plotStatistics(gameBoard.getStatistics()))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
