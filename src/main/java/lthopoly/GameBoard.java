@@ -141,7 +141,7 @@ public class GameBoard {
                 break;
             }
             case DEFAULT_VIEW: {
-                TextUI.printBoard(this);
+                TextUI.printStatus(this);
                 break;
             }
             case SHOW_BOARD: {
