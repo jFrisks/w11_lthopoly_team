@@ -132,6 +132,7 @@ public class GameBoard {
             }
             case PAY_RENT: {
                 spaces.get(currentPlayer.pos).action(this, PAY_RENT);
+                currentPlayerHasThrown = false;
                 //TODO: FEEDBACK
                 break;
             }
