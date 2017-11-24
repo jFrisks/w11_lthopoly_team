@@ -37,7 +37,7 @@ object Main {
       action = getAction(gameBoard)
       gameBoard.doAction(action)
 
-      if (action == 4 || action == 2 || action == 1)
+     if (action == 4 || action == 2 || action == 1 || action == 3)
         turn += 1
     }
     /**
