@@ -17,7 +17,7 @@ object TextUI {
       case Success(i) => i
       case Failure(f) => println("Must be a number."); -1
     }
-    val players = for (i <- 1 to userInput.toInt) yield new Player(scala.io.StdIn.readLine("Player " + i + ": "), 500, 0)
+    val players = for (i <- 1 to userInput.toInt) yield new Player(scala.io.StdIn.readLine("Player " + i + ": "), 50, 0)
 
     println("Welcome, ")
     players.foreach(p => print(p.name + ", "))
