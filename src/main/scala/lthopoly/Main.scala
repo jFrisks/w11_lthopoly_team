@@ -27,7 +27,7 @@ object Main {
       )
 
     // 2. Huvud-loop
-    while (action != 7 || !gameBoard.isGameOver()){
+    while (action != 7 && !gameBoard.isGameOver()){
       // sätt currentPlayer
       gameBoard.currentPlayer = players(turn % players.length)
 
