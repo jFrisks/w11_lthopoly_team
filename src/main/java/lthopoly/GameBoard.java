@@ -111,13 +111,12 @@ public class GameBoard {
                 moveCurrentPlayer(diceRoll);
                 currentPlayerHasThrown = true;
                 System.out.println("Du tog " + diceRoll + " steg.");
-                //TODO: FEEDBACK - hur många steg + vilken typ av ruta1
                 break;
             }
             /**Case 2*/
             case DRAW_CARD: {
                 //Spaceobjectet där spelaren står - väljer en action - matar in this (board) och action draw card.
-                
+
                 spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
                 currentPlayerHasThrown = false;
                 //TODO: FEEDBACK
