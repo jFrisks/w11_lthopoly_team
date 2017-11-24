@@ -177,7 +177,7 @@ public class GameBoard {
      * Negative adjustment moves the player backwards.
      */
     public void moveCurrentPlayer(int adjustment) {
-        currentPlayer.setPosition(currentPlayer.getPosition() + adjustment);
+        currentPlayer.setPosition((currentPlayer.getPosition() + adjustment) % spaces.size());
     }
 
     /**
