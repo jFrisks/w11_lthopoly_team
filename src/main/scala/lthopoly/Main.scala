@@ -27,7 +27,7 @@ object Main {
       )
 
     // 2. Huvud-loop
-    while (action != 7){
+    do {
       // sätt currentPlayer
       gameBoard.currentPlayer = players(turn % players.length)
 
@@ -37,9 +37,11 @@ object Main {
       action = getAction(gameBoard)
       gameBoard.doAction(action)
 
-      if (action == 4)
+     if (action == 4 || action == 2 || action == 1 || action == 3)
         turn += 1
-    }
+    }while (action != 7 && !gameBoard.isGameOver())
+
+    print(TextUI.plotStatistics(gameBoard.getStatistics().asScala))
     /**
       * Retrieves all possible actions from a GameBoard and joins
       * them with corresponding description Strings into tuples.

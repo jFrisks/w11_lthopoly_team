@@ -35,8 +35,10 @@ public class MoveSpace extends BoardSpace {
     public void action(GameBoard board, int action) {
         if (action == board.DRAW_CARD){
             card = cards[ThreadLocalRandom.current().nextInt(0, cards.length)];
-            board.getCurrentPlayer().adjustMoney(card.getPositionAdjustment());
-        }else{
+            board.moveCurrentPlayer(card.getPositionAdjustment());
+            System.out.println(card.getDescription());
+
+          }else{
             board.doAction(action);
         }
     }

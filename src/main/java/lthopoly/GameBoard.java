@@ -63,7 +63,7 @@ public class GameBoard {
      */
     public boolean isGameOver() {
         //kolla om någon av this.players har 0 sek
-        if (currentPlayer.getMoney() == 0) return true;
+        if (currentPlayer.getMoney() <= 0) return true;
         else {
             return false;
         }
@@ -107,26 +107,31 @@ public class GameBoard {
         switch (action){
             /**CASE 1**/
             case THROW_DICE: {
-                moveCurrentPlayer((int)(Math.random() * 5 + 1));
+                int diceRoll = (int)(Math.random() * 5 + 1);
+                moveCurrentPlayer(diceRoll);
                 currentPlayerHasThrown = true;
-                //TODO: FEEDBACK - hur många steg + vilken typ av ruta1
+                System.out.println("Du tog " + diceRoll + " steg.");
                 break;
             }
             /**Case 2*/
             case DRAW_CARD: {
                 //Spaceobjectet där spelaren står - väljer en action - matar in this (board) och action draw card.
+
                 spaces.get(currentPlayer.pos).action(this, DRAW_CARD);
+                currentPlayerHasThrown = false;
                 //TODO: FEEDBACK
                 break;
             }
             case BUY_PROPERTY: {
 
                 spaces.get(currentPlayer.pos).action(this, BUY_PROPERTY);
+                currentPlayerHasThrown = false;
                 //TODO: FEEDBACK
                 break;
             }
             case PAY_RENT: {
                 spaces.get(currentPlayer.pos).action(this, PAY_RENT);
+                currentPlayerHasThrown = false;
                 //TODO: FEEDBACK
                 break;
             }
@@ -136,6 +141,7 @@ public class GameBoard {
                 break;
             }
             case DEFAULT_VIEW: {
+                TextUI.printStatus(this);
                 break;
             }
             case SHOW_BOARD: {
@@ -172,7 +178,7 @@ public class GameBoard {
      * Negative adjustment moves the player backwards.
      */
     public void moveCurrentPlayer(int adjustment) {
-        currentPlayer.setPosition(currentPlayer.getPosition() + adjustment);
+        currentPlayer.setPosition((currentPlayer.getPosition() + adjustment) % spaces.size());
     }
 
     /**

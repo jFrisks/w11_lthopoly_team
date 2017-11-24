@@ -50,7 +50,7 @@ public class HouseSpace extends BoardSpace {
             System.out.println("Du har köpt detta");
         }else if (action == board.PAY_RENT){
             board.getCurrentPlayer().adjustMoney((-1) * rent);
-            //owner.adjustMoney(rent);
+            owner.adjustMoney(rent);
             System.out.println("Du har betalat hyra!");
         }else {
           // om man ställer sig på sin egen byggnad
