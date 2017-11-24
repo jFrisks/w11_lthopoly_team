@@ -26,10 +26,12 @@ public class MoneySpace extends BoardSpace {
     /**
      * Performs a game action available while on this space
      */
+    @Override
     public void action(GameBoard board, int action) {
         if (action == board.DRAW_CARD){
             card = cards[ThreadLocalRandom.current().nextInt(0, cards.length)];
             board.getCurrentPlayer().adjustMoney(card.getMoney());
+            System.out.println(card.getDescription());
         }else{
             board.doAction(action);
         }
